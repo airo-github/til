@@ -1,0 +1,18 @@
+Rails基礎　課題11
+
+ボードにサムネイルを追加する
+
+1　carrierwaveとmini_magickをGemfileに追加しbundle installした
+
+2　rails g uploder board_image_cacheでアップローダーを作成
+
+3　rails g migration add_board_image_cache_to_boards board_image_cache:string でマイグレーションファイルを作成
+   ここでstring型なのはモデルに直接ファイルを保存するのではなくファイルがある場所の名前を保存するから
+
+4　rails db:migrate　でマイグレートしboard controllerで画像を読み込むよう追記しviewにfile_fieldを設定した
+
+ここからはまだ未解決
+
+5　mini_magickがちゃんと動作していない？
+　 翻訳ができてなさそう　←　これはja.ymlに追記でOK
+   サムネイルtranslation missing: ja.errors.messages.mini_magick_processing_error
